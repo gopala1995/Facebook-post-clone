@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 
 import "./Post.css";
 import userimg from "./Icon/icons8-user-50.png";
@@ -6,13 +6,16 @@ import friends from "./Icon/icons8-friends-64.png";
 import calender from "./Icon/icons8-calendar-48.png";
 import location from "./Icon/icons8-location-16.png";
 import giff from "./Icon/icons8-gif-30.png";
+import live from "./Icon/icons8-video-call-50.png"
+import photo from "./Icon/icons8-photo-gallery-30.png"
+import pen from "./Icon/icons8-fountain-pen-48.png"
 
 // import ReactGiphySearchbox from "react-giphy-searchbox";
 
 export const Post = () => {
   const [search, setSearch] = useState("");
-  const [text ,setText] = useState("")
-  const [Display, setDisplay] = useState("")
+  const [text, setText] = useState("");
+  const [Display, setDisplay] = useState([]);
   const [Gifs, setGifs] = useState([]);
 
   const Giphy_Api = `https://api.giphy.com/v1/gifs/search?api_key=81VVDpHQgebCEmrSghxiaywJf0r2chnY&q=${search}&limit=25&offset=0&rating=g&lang=en`;
@@ -37,36 +40,45 @@ export const Post = () => {
     }
   };
 
-  const displayGIPH = () =>{
-       setDisplay(text)
-  }
+  const displayText = () => {
+    setText([...text,Display]);
+    console.log(Display)
+  };
 
   return (
     <div className="mainContainer">
-      <div></div>
+      <div className="topDiv">
+        <button  className="topBtn" >  <span>
+            <img className="icon1" src={pen} alt="" />
+          </span>Compose post</button>
+        <button className="topBtn">  <span>
+            <img className="icon1" src={photo} alt="" />
+          </span>Photo/Video Album</button>
+        <button className="topBtn">  <span>
+            <img className="icon1" src={live} alt="" />
+          </span>Live Video</button>
+      </div>
       <span>
-        <img src={userimg} alt="" style={{ marginBottom: "80px" }} />
+        <img src={userimg} alt="" style={{ marginBottom: "20px" }} />
         <input
           className="post_div"
           type="text"
           placeholder="What's in your mind"
-          value={text}
+          // value={text}
           onChange={(e) => setText(e.target.value)}
         />
       </span>
 
       <div className="searchboxwrapper">
         <button className="btn1">
-          
           <span>
             <img className="icon1" src={friends} alt="" />
           </span>
           Tag friends
         </button>
         <button className="btn1">
-          
           <span>
-            <img className="icon1" src={location} alt="" />
+            <img  className="icon1" src={location} alt="" />
           </span>
           Check in
         </button>
@@ -79,9 +91,13 @@ export const Post = () => {
           onChange={(e) => setSearch(e.target.value)}
         />
         <button className="btn1">
-          
           <span>
-            <img className="icon1" src={calender} alt="" />
+            <img
+              onClick={displayText}
+              className="icon1"
+              src={calender}
+              alt=""
+            />
           </span>
           Tag events
         </button>
@@ -93,17 +109,15 @@ export const Post = () => {
         {Gifs.map((gif) => {
           return (
             <div className="items">
-              <img  className="imgDiv" src={gif} alt="" />
+              <img className="imgDiv" src={gif} alt="" onClick={()=>setDisplay(gif)} />
             </div>
           );
         })}
       </div>
       <div className="displayText">
-           {/* <img src={text} alt="" /> */}
-          
-              <p>{text}</p> 
-           
-          
+        {/* <img src={} alt="" /> */}
+        
+        <p>{text}</p>
       </div>
     </div>
   );
