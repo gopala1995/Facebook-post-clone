@@ -11,7 +11,7 @@
     border: 1px solid blueviolet;
     width: 50%;
     margin: auto;
-    margin-left: 32%;
+    margin-left: 30%;
 }
 .btn1{
     display: flexbox;
@@ -25,10 +25,19 @@
 }
 .btn_post{
     border: 0px;
-    margin-left: 60%;
+    margin-left: 40%;
+    width: 110px;
+    font-size: 14.3px;
+    font-family: sans-serif;
+    background-color: #4FC3F7;
+    color: white;
+    border-radius: 5px;
 }
 .postContent_div{
     border: 1px solid red;
+    /* width: 200px;
+    height: 200px; */
+    margin: auto;
 }
 .imgDiv{
     display: flexbox;
