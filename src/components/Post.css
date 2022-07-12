@@ -1,8 +1,48 @@
 .mainContainer{
     width: 35%;
     margin: auto;
+    border: 1px solid red;
 }
 .post_div{
     height: 130px;
     width: 60%;
 }
+.searchboxwrapper{
+    border: 1px solid blueviolet;
+    width: 50%;
+    margin: auto;
+    margin-left: 32%;
+}
+.btn1{
+    display: flexbox;
+    grid-template-columns: 50px 50px;
+    border: 0;
+    margin: 10px;
+}
+.btn_post{
+    border: 0px;
+    margin-left: 60%;
+}
+.postContent_div{
+    border: 1px solid red;
+}
+.imgDiv{
+    display: flexbox;
+    grid-template-columns: 60px 60px;
+    
+}
+
+
+
+
+
+/* 
+{/* <ReactGiphySearchbox
+          className="btn1"
+          apiKey="81VVDpHQgebCEmrSghxiaywJf0r2chnY"
+          onSelect={(item) => console.log(item)}
+          masonryConfig={[
+            { columns: 2, imageWidth: 100, gutter: 5 },
+            { mq: "700px", columns: 3, imageWidth: 100, gutter: 5 },
+          ]}
+        /> }*/ 
