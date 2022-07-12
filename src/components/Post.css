@@ -18,6 +18,10 @@
     grid-template-columns: 50px 50px;
     border: 0;
     margin: 10px;
+    width: 110px;
+    font-size: 14.3px;
+    font-family: sans-serif;
+    background-color: antiquewhite;
 }
 .btn_post{
     border: 0px;
@@ -29,7 +33,10 @@
 .imgDiv{
     display: flexbox;
     grid-template-columns: 60px 60px;
-    
+
+}
+.icon1{
+    width: 15px;
 }
 
 
