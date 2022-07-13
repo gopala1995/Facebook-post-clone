@@ -1,7 +1,8 @@
 .mainContainer{
     width: 35%;
     margin: auto;
-    border: 1px solid red;
+    border: 1px solid gray;
+    border-radius: 10px;
 }
 .topDiv > div{
     border: 0px ;
@@ -10,11 +11,12 @@
     
 }
 .post_div{
+    border: 0px;
     height: 130px;
     width: 60%;
 }
 .searchboxwrapper{
-    border: 1px solid blueviolet;
+    /* border: 1px solid blueviolet; */
     width: 60%;
     margin: auto;
     margin-left: 24.5%;
@@ -34,7 +36,7 @@
 }
 .btn_post{
     border: 0px;
-    margin-left: 50%;
+    margin-left: 35%;
     width: 110px;
     font-size: 14.3px;
     font-family: sans-serif;
@@ -43,7 +45,7 @@
     border-radius: 5px;
 }
 .postContent_div{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* width: 200px;
     height: 200px; */
     margin: auto;
